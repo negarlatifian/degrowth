@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className='flex flex-row bg-white'>
+    <main className='flex flex-row bg-white h-lvh overflow-y-hidden'>
       <Left />
       <Right />
     </main>

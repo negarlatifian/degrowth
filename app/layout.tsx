@@ -27,6 +27,7 @@ const monumentGrotesk = localFont({
     },
   ],
   variable: '--font-monumentGrotesk',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
