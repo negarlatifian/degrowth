@@ -2,7 +2,7 @@ import React from 'react';
 
 const Left = () => {
   return (
-    <div className='flex flex-col h-lvh w-[40%] mt-[3rem] ml-[3.5rem]'>
+    <div className='flex flex-col h-lvh w-[38.5%] mt-[3rem] ml-[3.5rem]'>
       <h2 className='font-display'>About</h2>
       <ul className='flex flex-col mt-auto mb-[5rem]'>
         <li className='font-display'>Intro</li>

@@ -22,7 +22,7 @@ const suissIntl = localFont({
 const monumentGrotesk = localFont({
   src: [
     {
-      path: '../public/fonts/MonumentGrotesk-Mono.otf',
+      path: '../public/fonts/MonumentGrotesk-Regular.otf',
       style: 'bold',
     },
   ],
