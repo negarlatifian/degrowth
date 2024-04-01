@@ -6,7 +6,7 @@ import Quote from '../text/Quote';
 
 const Strategies = () => {
   return (
-    <div>
+    <div className='mb-[8rem]'>
       <Title>Strategies</Title>
       <Subtitle>Slowness / Laziness</Subtitle>
       <Text>
