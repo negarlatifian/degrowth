@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Children } from 'react';
 
-const Text = ({
+const Endnote = ({
   children,
   className,
 }: {
@@ -10,7 +10,7 @@ const Text = ({
   return (
     <p
       className={
-        'font-text w-[40rem] text-[1.1rem] mb-[1rem] leading-5' +
+        'font-text text-[.6rem] w-[7.5rem] leading-3 mr-[4rem]' +
         ' ' +
         className
       }
@@ -20,4 +20,4 @@ const Text = ({
   );
 };
 
-export default Text;
+export default Endnote;

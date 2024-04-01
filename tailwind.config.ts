@@ -13,6 +13,9 @@ const config: Config = {
         display: ['var(--font-monumentGrotesk)'],
       },
     },
+    colors: {
+      green: '#3CB668',
+    },
   },
   plugins: [],
 };
