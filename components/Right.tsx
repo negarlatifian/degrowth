@@ -5,6 +5,7 @@ import Degrowth from './right/Degrowth';
 import Values from './right/Values';
 import ImageBanner from './text/ImageBanner';
 import Disawoval from './right/Disawoval';
+import Strategies from './right/Strategies';
 
 const Right = () => {
   return (
@@ -16,6 +17,8 @@ const Right = () => {
       <Values />
       <ImageBanner srcUrl='/Images/3.jpg' />
       <Disawoval />
+      <ImageBanner srcUrl='/Images/4.jpg' />
+      <Strategies />
     </div>
   );
 };
