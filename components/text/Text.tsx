@@ -10,7 +10,7 @@ const Text = ({
   return (
     <p
       className={
-        'font-text w-[40rem] text-[1.1rem] mb-[1rem] leading-5' +
+        'font-text xs:w-[40rem] w-[89%] xs:text-[1.1rem] text-[0.75rem] mb-[1rem] xs:leading-5 leading-4' +
         ' ' +
         className
       }

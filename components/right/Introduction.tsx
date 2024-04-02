@@ -4,8 +4,10 @@ import Text from '../text/Text';
 
 const Introduction = () => {
   return (
-    <div className='mt-[23rem]'>
-      <h2 className='font-display text-[2.5rem] mb-[3rem]'>Introduction</h2>
+    <div className='xs:mt-[23rem] mt-[10rem] ml-[2rem] xs:ml-[0rem]'>
+      <h2 className='font-display xs:text-[2.5rem] text-[1.5rem] mb-[3rem]'>
+        Introduction
+      </h2>
       <Text>
         The Degrowth Toolbox for Artistic Practices is both a proposal and an
         invitation. Emerging from an ongoing artistic research process, The
