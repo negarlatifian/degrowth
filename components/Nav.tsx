@@ -40,14 +40,15 @@ const NavSmall = ({
       <WrapperSmall open={isOpen}>
         <InnerWrapperSmall>
           <NavWrapperSmall>
-            <Header>nav</Header>
+            {/* <Header>nav</Header> */}
             {content.map((item, i) => (
               <NavLink
+                className='font-text'
                 href={`#${item.title}`}
                 key={`NavLink${i}`}
                 onClick={() => setIsOpen(false)}
               >
-                <SectionTag>{item.section}</SectionTag>
+                {/* <SectionTag className='font-text'>{item.section}</SectionTag> */}
                 {item.title}
               </NavLink>
             ))}
@@ -70,11 +71,15 @@ export const NavLarge = ({
   }[];
 }) => (
   <Wrapper>
-    <Header>nav</Header>
+    {/* <Header>nav</Header> */}
 
     {content.map((item, i) => (
-      <NavLink href={`#${item.title}`} key={`NavLinkLarge${i}`}>
-        <SectionTag>{item.section}</SectionTag>
+      <NavLink
+        className='font-text'
+        href={`#${item.title}`}
+        key={`NavLinkLarge${i}`}
+      >
+        {/* <SectionTag className='font-text'>{item.section}</SectionTag> */}
         {item.title}
       </NavLink>
     ))}
@@ -89,11 +94,17 @@ const WrapperSmall = styled.div<{ open: boolean }>`
   padding: 2vw;
   padding: calc(var(--vw, 1vw) * 2);
 
-  /* background-color: black; */
+  background-color: white;
   position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
+  border: 2px solid black;
+  width: 90%;
+  height: 90%;
+  left: 4vw;
+  right: 4vw;
+  top: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: 750px) {
     display: none;
@@ -101,9 +112,9 @@ const WrapperSmall = styled.div<{ open: boolean }>`
 `;
 
 const InnerWrapperSmall = styled.div`
-  width: 100%;
-  height: 100%;
-  border: 1px solid #00ff29;
+  width: 80%;
+  height: 80%;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,7 +126,7 @@ const NavWrapperSmall = styled.div`
 `;
 
 const IconWrapper = styled.div<{ show: boolean }>`
-  /* background-color: black; */
+  /* background-color: white; */
   position: fixed;
   cursor: pointer;
 
@@ -124,10 +135,10 @@ const IconWrapper = styled.div<{ show: boolean }>`
   transform: ${(props: any) => (props.show ? 'none' : 'translate(100%, 0)')};
 
   top: 6.1vw;
-  top: calc(var(--vw, 1vw) * 6.1);
+  top: calc(var(--vw, 2vw) * 6.1);
 
   right: 6.1vw;
-  right: calc(var(--vw, 1vw) * 6.1);
+  right: calc(var(--vw, 2vw) * 6.1);
 
   width: 9vw;
   width: calc(var(--vw, 1vw) * 9);
@@ -153,64 +164,64 @@ const Wrapper = styled.div<{ top?: number | null; height?: number | null }>`
   }
 `;
 
-const Header = styled.div`
-  color: #00ff29;
-  font-family: 'MG Mono';
-  text-transform: uppercase;
+// const Header = styled.div`
+//   color: #000000;
+//   font-family: 'MG Mono';
+//   text-transform: uppercase;
 
-  font-size: 0.625vw;
-  font-size: calc(var(--vw, 1vw) * 0.625);
+//   font-size: 0.625vw;
+//   font-size: calc(var(--vw, 1vw) * 0.625);
 
-  padding-bottom: 0.208vw;
-  padding-bottom: calc(var(--vw, 1vw) * 0.208);
+//   padding-bottom: 0.208vw;
+//   padding-bottom: calc(var(--vw, 1vw) * 0.208);
 
-  @media (max-width: 749px) {
-    font-size: 4vw;
-    font-size: calc(var(--vw, 1vw) * 4);
-  }
+//   @media (max-width: 749px) {
+//     font-size: 4vw;
+//     font-size: calc(var(--vw, 1vw) * 4);
+//   }
 
-  @media (min-width: 750px) and (max-width: 1249px) {
-    font-size: 1vw;
-    font-size: calc(var(--vw, 1vw) * 1);
-    padding-bottom: 0vw;
-  }
-`;
+//   @media (min-width: 750px) and (max-width: 1249px) {
+//     font-size: 1vw;
+//     font-size: calc(var(--vw, 1vw) * 1);
+//     padding-bottom: 0vw;
+//   }
+// `;
 
-const SectionTag = styled(Header)`
-  /* position: absolute;
+// const SectionTag = styled(Header)`
+//   /* position: absolute;
 
-  left: -1vw;
-  left: calc(var(--vw, 1vw) * -1);
+//   left: -1vw;
+//   left: calc(var(--vw, 1vw) * -1);
 
-  top: 0.475vh;
-  top: calc(var(--vh, 1vh) * 0.475); */
-  display: none;
+//   top: 0.475vh;
+//   top: calc(var(--vh, 1vh) * 0.475); */
+//   display: none;
 
-  @media (max-width: 749px) {
-    font-size: 3vw;
-    font-size: calc(var(--vw, 1vw) * 3);
+//   @media (max-width: 749px) {
+//     font-size: 3vw;
+//     font-size: calc(var(--vw, 1vw) * 3);
 
-    left: -5vw;
-    left: calc(var(--vw, 1vw) * -5);
+//     left: -5vw;
+//     left: calc(var(--vw, 1vw) * -5);
 
-    top: 1.2vh;
-    top: calc(var(--vw, 1vw) * 1.2);
-  }
+//     top: 1.2vh;
+//     top: calc(var(--vw, 1vw) * 1.2);
+//   }
 
-  @media (min-width: 750px) and (max-width: 1249px) {
-    left: -1.5vw;
-    left: calc(var(--vw, 1vw) * -1.5);
-    top: 0.3vh;
-    top: calc(var(--vh, 1vh) * 0.3);
-  }
-`;
+//   @media (min-width: 750px) and (max-width: 1249px) {
+//     left: -1.5vw;
+//     left: calc(var(--vw, 1vw) * -1.5);
+//     top: 0.3vh;
+//     top: calc(var(--vh, 1vh) * 0.3);
+//   }
+// `;
 
 const NavLink = styled.a`
   text-decoration: none;
-  color: white;
-  font-family: 'Suisse';
+  color: #000000;
+  font-family: var(--font-suissIntl);
 
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   position: relative;
 
   font-size: 1.458vw;

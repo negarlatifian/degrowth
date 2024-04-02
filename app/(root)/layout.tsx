@@ -6,15 +6,12 @@ import Nav from '@/components/Nav';
 import Left from '@/components/Left';
 
 const nav = [
-  { section: 'a0', title: 'purpose' },
-  { section: 'a1', title: 'what is degrowth' },
-  { section: 'a2', title: 'considerations' },
-  { section: 'a3', title: 'questions' },
-  { section: 'b1', title: 'glossary' },
-  { section: 'b2', title: 'bibliography' },
-  { section: 'c1', title: 'contribute' },
-  { section: 'd1', title: 'download' },
-  { section: 'e1', title: 'colophon' },
+  { section: 'a0', title: 'About' },
+  { section: 'a1', title: 'Intro' },
+  { section: 'a2', title: 'Degrowth' },
+  { section: 'a3', title: 'Values' },
+  { section: 'b1', title: 'Disavowals' },
+  { section: 'b2', title: 'Strategies' },
 ];
 
 export default function RootLayout({
@@ -39,7 +36,7 @@ export default function RootLayout({
         <Nav content={nav} show={hideOnScroll} />
         <div className='flex flex-row bg-white h-lvh overflow-y-hidden'>
           <Left />
-          <div className='flex flex-col w-[61.5%] overflow-y-scroll'>
+          <div className='flex flex-col w-[100%] sm:w-[61.5%] overflow-y-scroll'>
             {children}
           </div>
         </div>

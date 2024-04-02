@@ -3,7 +3,7 @@ import React from 'react';
 
 const Left = () => {
   return (
-    <div className='flex flex-col h-lvh w-[38.5%] mt-[3rem] ml-[3.5rem]'>
+    <div className='flex-col h-lvh w-[38.5%] mt-[3rem] ml-[3.5rem] hidden xs:flex'>
       {/* <h2 className='font-display'>About</h2> */}
       <Link href='/About' className='font-display'>
         About
