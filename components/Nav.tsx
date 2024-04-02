@@ -105,6 +105,7 @@ const WrapperSmall = styled.div<{ open: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 
   @media (min-width: 750px) {
     display: none;
