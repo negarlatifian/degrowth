@@ -1,11 +1,13 @@
 import React from 'react';
 import Text from '../text/Text';
 import Subtitle from '../text/Subtitle';
+import Title from '../text/Title';
 
 const Values = () => {
   return (
-    <div>
-      <h2 className='font-display text-[2.5rem] mb-[3rem]'>Values</h2>
+    <div className='xs:mb-[10rem] mb-[2rem] xs:mt-[23rem] mt-[2rem] ml-[2rem] xs:ml-[0rem]'>
+      {/* <h2 className='font-display text-[2.5rem] mb-[3rem]'>Values</h2> */}
+      <Title>Values</Title>
       <Subtitle>Well-being</Subtitle>
       <Text>
         Well-being in the literature of degrowth is understood as the fulfilment

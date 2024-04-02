@@ -22,7 +22,7 @@ const list = [
 
 const Disawoval = () => {
   return (
-    <div>
+    <div className='xs:mb-[10rem] mb-[2rem] xs:mt-[23rem] mt-[5rem] ml-[2rem] xs:ml-[0rem]'>
       <Title>Disawovals</Title>
       <Subtitle>Efficiency</Subtitle>
       <Text>
@@ -34,13 +34,17 @@ const Disawoval = () => {
       </Text>
       <ul className='pl-5 list-disc'>
         {list.map((el) => (
-          <li className='font-text'>{el}</li>
+          <li className='font-text xs:text-[1.1rem] text-[0.75rem]'>{el}</li>
         ))}
       </ul>
       <Text>All of this in favour of:</Text>
       <ul className='pl-5 list-disc mb-[1rem]'>
-        <li className='font-text'>easily quantifiable outcomes,</li>
-        <li className='font-text'>and met deadlines. </li>
+        <li className='font-text xs:text-[1.1rem] text-[0.75rem]'>
+          easily quantifiable outcomes,
+        </li>
+        <li className='font-text xs:text-[1.1rem] text-[0.75rem]'>
+          and met deadlines.{' '}
+        </li>
       </ul>
       <Text>
         Efficiency, of course, is practically enforced when one is working on

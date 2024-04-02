@@ -1,13 +1,15 @@
 import React from 'react';
 import Quote from '../text/Quote';
 import Text from '../text/Text';
+import Title from '../text/Title';
 
 const Introduction = () => {
   return (
     <div className='xs:mt-[23rem] mt-[10rem] ml-[2rem] xs:ml-[0rem]'>
-      <h2 className='font-display xs:text-[2.5rem] text-[1.5rem] mb-[3rem]'>
+      {/* <h2 className='font-display xs:text-[2.5rem] text-[1.5rem] mb-[3rem]'>
         Introduction
-      </h2>
+      </h2> */}
+      <Title>Introduction</Title>
       <Text>
         The Degrowth Toolbox for Artistic Practices is both a proposal and an
         invitation. Emerging from an ongoing artistic research process, The

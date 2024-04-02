@@ -4,11 +4,13 @@ import Quote from '../text/Quote';
 import Endnote from '../text/Endnote';
 import TextEndnote from '../text/TextEndnote';
 import Sup from '../text/Sup';
+import Title from '../text/Title';
 
 const Degrowth = () => {
   return (
-    <div className='mt-[23rem] mb-[10rem]'>
-      <h2 className='font-display text-[2.5rem] mb-[3rem]'>Degrowth</h2>
+    <div className=' xs:mb-[10rem] mb-[2rem] xs:mt-[23rem] mt-[10rem] ml-[2rem] xs:ml-[0rem] '>
+      {/* <h2 className='font-display text-[2.5rem] mb-[3rem]'>Degrowth</h2> */}
+      <Title>Degrowth</Title>
       <div className='flex flex-row justify-between'>
         <div className='flex flex-col'>
           <TextEndnote>
@@ -49,7 +51,7 @@ const Degrowth = () => {
             which is disentangled from economic representations.<Sup>4</Sup>
           </Quote>
         </div>
-        <div className='flex flex-col'>
+        <div className='xs:flex flex-col hidden'>
           <Endnote className='mt-[2.7rem]'>
             1. G. D’ Alisa, F. Demaria, and G. Kallis, ‘Degrowth’ in G. D’
             Alisa, F. Demaria, and G. Kallis (eds), Degrowth, A Vocabulary for a

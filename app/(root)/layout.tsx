@@ -32,7 +32,7 @@ export default function RootLayout({
   );
   return useMemo(
     () => (
-      <main>
+      <main className='overflow-x-hidden'>
         <Nav content={nav} show={hideOnScroll} />
         <div className='flex flex-row bg-white h-lvh overflow-y-hidden'>
           <Left />
