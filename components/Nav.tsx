@@ -70,7 +70,7 @@ export const NavLarge = ({
     title: string;
   }[];
 }) => (
-  <Wrapper>
+  <Wrapper className='z-10'>
     {/* <Header>nav</Header> */}
 
     {content.map((item, i) => (
@@ -163,58 +163,6 @@ const Wrapper = styled.div<{ top?: number | null; height?: number | null }>`
   @media (max-width: 1249px) {
   }
 `;
-
-// const Header = styled.div`
-//   color: #000000;
-//   font-family: 'MG Mono';
-//   text-transform: uppercase;
-
-//   font-size: 0.625vw;
-//   font-size: calc(var(--vw, 1vw) * 0.625);
-
-//   padding-bottom: 0.208vw;
-//   padding-bottom: calc(var(--vw, 1vw) * 0.208);
-
-//   @media (max-width: 749px) {
-//     font-size: 4vw;
-//     font-size: calc(var(--vw, 1vw) * 4);
-//   }
-
-//   @media (min-width: 750px) and (max-width: 1249px) {
-//     font-size: 1vw;
-//     font-size: calc(var(--vw, 1vw) * 1);
-//     padding-bottom: 0vw;
-//   }
-// `;
-
-// const SectionTag = styled(Header)`
-//   /* position: absolute;
-
-//   left: -1vw;
-//   left: calc(var(--vw, 1vw) * -1);
-
-//   top: 0.475vh;
-//   top: calc(var(--vh, 1vh) * 0.475); */
-//   display: none;
-
-//   @media (max-width: 749px) {
-//     font-size: 3vw;
-//     font-size: calc(var(--vw, 1vw) * 3);
-
-//     left: -5vw;
-//     left: calc(var(--vw, 1vw) * -5);
-
-//     top: 1.2vh;
-//     top: calc(var(--vw, 1vw) * 1.2);
-//   }
-
-//   @media (min-width: 750px) and (max-width: 1249px) {
-//     left: -1.5vw;
-//     left: calc(var(--vw, 1vw) * -1.5);
-//     top: 0.3vh;
-//     top: calc(var(--vh, 1vh) * 0.3);
-//   }
-// `;
 
 const NavLink = styled.a`
   text-decoration: none;
