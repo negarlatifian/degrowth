@@ -9,7 +9,7 @@ import Strategies from './right/Strategies';
 
 const Right = () => {
   return (
-    <div className='flex flex-col w-[61.5%] overflow-y-scroll'>
+    <div className='flex flex-col w-[61.5%] overflow-y-scroll overflow-x-hidden'>
       <Hero />
       <Introduction />
       <Degrowth />
