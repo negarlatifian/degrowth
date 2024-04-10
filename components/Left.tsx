@@ -9,11 +9,21 @@ const Left = () => {
         About
       </Link>
       <ul className='flex flex-col mt-auto mb-[5rem]'>
-        <li className='font-display'>Intro</li>
-        <li className='font-display'>Degrowth</li>
-        <li className='font-display'>Values</li>
-        <li className='font-display'>Disavowals</li>
-        <li className='font-display'>Strategies</li>
+        <li className='font-display'>
+          <Link href='/#intro'>Intro</Link>
+        </li>
+        <li className='font-display'>
+          <Link href='/#degrowth'>Degrowth</Link>
+        </li>
+        <li className='font-display'>
+          <Link href='/#values'>Values</Link>
+        </li>
+        <li className='font-display'>
+          <Link href='/#disavowals'>Disavowals</Link>
+        </li>
+        <li className='font-display'>
+          <Link href='/#strategies'>Strategies</Link>
+        </li>
       </ul>
     </div>
   );

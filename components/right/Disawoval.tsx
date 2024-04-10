@@ -25,8 +25,11 @@ const list = [
 
 const Disawoval = () => {
   return (
-    <div className='xs:mb-[10rem] mb-[2rem] xs:mt-[23rem] mt-[5rem] ml-[2rem] xs:ml-[0rem]'>
-      <Title>Disawovals</Title>
+    <div
+      className='xs:mb-[10rem] mb-[2rem] xs:mt-[23rem] mt-[5rem] ml-[2rem] xs:ml-[0rem]'
+      id='disavowals'
+    >
+      <Title>Disavowals</Title>
       <div className='flex flex-row justify-between'>
         <div className='flex flex-col'>
           <Subtitle>Efficiency</Subtitle>

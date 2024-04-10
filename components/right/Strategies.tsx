@@ -9,7 +9,10 @@ import Sup from '../text/Sup';
 
 const Strategies = () => {
   return (
-    <div className='xs:mb-[8rem] mb-[2rem] xs:mt-[23rem] mt-[5rem] ml-[2rem] xs:ml-[0rem]'>
+    <div
+      className='xs:mb-[8rem] mb-[2rem] xs:mt-[23rem] mt-[5rem] ml-[2rem] xs:ml-[0rem]'
+      id='strategies'
+    >
       <Title>Strategies</Title>
       <div className='flex flex-row justify-between'>
         <div className='flex flex-col'>

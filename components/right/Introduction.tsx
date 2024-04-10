@@ -5,7 +5,7 @@ import Title from '../text/Title';
 
 const Introduction = () => {
   return (
-    <div className='xs:mt-[23rem] mt-[10rem] ml-[2rem] xs:ml-[0rem]'>
+    <div className='xs:mt-[23rem] mt-[10rem] ml-[2rem] xs:ml-[0rem]' id='intro'>
       {/* <h2 className='font-display xs:text-[2.5rem] text-[1.5rem] mb-[3rem]'>
         Introduction
       </h2> */}

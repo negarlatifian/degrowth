@@ -8,7 +8,10 @@ import Title from '../text/Title';
 
 const Degrowth = () => {
   return (
-    <div className=' xs:mb-[10rem] mb-[2rem] xs:mt-[23rem] mt-[10rem] ml-[2rem] xs:ml-[0rem] w-auto'>
+    <div
+      className=' xs:mb-[10rem] mb-[2rem] xs:mt-[23rem] mt-[10rem] ml-[2rem] xs:ml-[0rem] w-auto'
+      id='degrowth'
+    >
       {/* <h2 className='font-display text-[2.5rem] mb-[3rem]'>Degrowth</h2> */}
       <Title>Degrowth</Title>
       <div className='flex flex-row justify-between'>
