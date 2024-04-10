@@ -6,12 +6,12 @@ import Nav from '@/components/Nav';
 import Left from '@/components/Left';
 
 const nav = [
-  { section: 'a0', title: 'About' },
-  { section: 'a1', title: 'Intro' },
-  { section: 'a2', title: 'Degrowth' },
-  { section: 'a3', title: 'Values' },
-  { section: 'b1', title: 'Disavowals' },
-  { section: 'b2', title: 'Strategies' },
+  { section: 'a0', title: 'About', href: '/About' },
+  { section: 'a1', title: 'Intro', href: '/#intro' },
+  { section: 'a2', title: 'Degrowth', href: '/#degrowth' },
+  { section: 'a3', title: 'Values', href: '/#values' },
+  { section: 'b1', title: 'Disavowals', href: '/#disavowals' },
+  { section: 'b2', title: 'Strategies', href: '/#strategies' },
 ];
 
 export default function RootLayout({

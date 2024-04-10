@@ -7,7 +7,7 @@ const Nav = ({
 
   show,
 }: {
-  content: { section: string; title: string }[];
+  content: { section: string; title: string; href: string }[];
 
   show: boolean;
 }) => {
@@ -25,6 +25,7 @@ const NavSmall = ({
   content: {
     section: string;
     title: string;
+    href: string;
   }[];
   show: boolean;
 }) => {
@@ -44,7 +45,8 @@ const NavSmall = ({
             {content.map((item, i) => (
               <NavLink
                 className='font-text'
-                href={`#${item.title}`}
+                // href={`#${item.title}`}
+                href={item.href}
                 key={`NavLink${i}`}
                 onClick={() => setIsOpen(false)}
               >
@@ -68,6 +70,7 @@ export const NavLarge = ({
   content: {
     section: string;
     title: string;
+    href: string;
   }[];
 }) => (
   <Wrapper className='z-10'>
@@ -76,7 +79,8 @@ export const NavLarge = ({
     {content.map((item, i) => (
       <NavLink
         className='font-text'
-        href={`#${item.title}`}
+        // href={`#${item.title}`}
+        href={item.href}
         key={`NavLinkLarge${i}`}
       >
         {/* <SectionTag className='font-text'>{item.section}</SectionTag> */}
