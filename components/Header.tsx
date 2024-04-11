@@ -7,7 +7,7 @@ const Header = ({
   navContent,
 }: {
   text: string[];
-  navContent: { section: string; title: string }[];
+  navContent: { section: string; title: string; href: string }[];
 }) => {
   return (
     <OuterWrapper>
