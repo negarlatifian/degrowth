@@ -6,8 +6,8 @@ const Subtitle = ({
   id,
 }: {
   children: any;
-  ref: any;
-  id: string;
+  ref?: any;
+  id?: string;
 }) => {
   return (
     <h3
