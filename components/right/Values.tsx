@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useRef, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import Text from '../text/Text';
 import Subtitle from '../text/Subtitle';
 import Title from '../text/Title';
@@ -7,6 +9,10 @@ import Endnote from '../text/Endnote';
 import Sup from '../text/Sup';
 
 const Values = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+
   return (
     <div
       className='xs:mb-[10rem] mb-[2rem] xs:mt-[23rem] mt-[2rem] ml-[2rem] xs:ml-[0rem]'
@@ -15,8 +21,10 @@ const Values = () => {
       {/* <h2 className='font-display text-[2.5rem] mb-[3rem]'>Values</h2> */}
       <Title>Values</Title>
       <div className='flex flex-row justify-between'>
-        <div className='flex flex-col'>
-          <Subtitle>Well-being</Subtitle>
+        <div className='flex flex-col' ref={ref}>
+          <Subtitle ref={ref} id='well-being'>
+            Well-being
+          </Subtitle>
           <TextEndnote>
             Well-being in the literature of degrowth is understood as the
             fulfilment of fundamental human needs, encompassing not only
@@ -27,7 +35,9 @@ const Values = () => {
             the planet. This contradicts the most common metrics of “well-being”
             within capitalist society, such as material wealth.
           </TextEndnote>
-          <Subtitle>Care</Subtitle>
+          <Subtitle ref={ref} id='care'>
+            Care
+          </Subtitle>
           <TextEndnote>
             Care is fundamental work for the welfare of people and communities.
             Generally speaking, it’s all the daily actions devoted to
@@ -55,7 +65,9 @@ const Values = () => {
             precarity. The alternative is to instead work in solidarity with
             each other.{' '}
           </TextEndnote>
-          <Subtitle>Community / Collectivity</Subtitle>
+          <Subtitle ref={ref} id='community'>
+            Community / Collectivity
+          </Subtitle>
           <TextEndnote>
             Community is understood here as a collective and interconnected
             social entity characterised by shared values, mutual support, and a
