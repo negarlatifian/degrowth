@@ -3,10 +3,13 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className='flex flex-col mt-[3rem]'>
+    <div className='flex flex-col mt-[5rem] sm:w-[61.5%] ml-[2rem]'>
       <Text>
         The Degrowth Toolbox for Artistic Practices was initiated in 2021 by{' '}
-        <a className='font-text text-[1.1rem] text-green '>
+        <a
+          className='text-green font-text xs:w-[40rem] w-[89%] xs:text-[1.1rem] text-[0.75rem] mb-[1rem] xs:leading-5 leading-4'
+          href='https://alexandrapapademetriou.com/'
+        >
           Alexandra Papademetriou.
         </a>
       </Text>
@@ -19,7 +22,9 @@ const About = () => {
       </Text>
       <Text>
         You can read the previous iteration of The Toolbox{' '}
-        <a className='font-text text-[1.1rem] text-green '>here.</a>
+        <a className=' text-green font-text xs:w-[40rem] w-[89%] xs:text-[1.1rem] text-[0.75rem] mb-[1rem] xs:leading-5 leading-4'>
+          here.
+        </a>
       </Text>
     </div>
   );
