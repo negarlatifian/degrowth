@@ -7,7 +7,6 @@ const Left = () => {
   const pathName = usePathname();
   return (
     <div className='flex-col h-lvh w-[38.5%] mt-[3rem] ml-[3.5rem] hidden xs:flex'>
-      {/* <h2 className='font-semiMono'>About</h2> */}
       <Link
         href='/About'
         className={`font-semiMono ${pathName === '/About' && 'text-green'} `}
