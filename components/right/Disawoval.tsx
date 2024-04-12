@@ -26,7 +26,7 @@ const list = [
 const Disawoval = () => {
   return (
     <div
-      className='xs:mb-[10rem] mb-[2rem] xs:mt-[23rem] mt-[5rem] ml-[2rem] xs:ml-[0rem]'
+      className='xs:mb-[10rem] mb-[2rem] xs:mt-[10rem] mt-[5rem] ml-[2rem] xs:ml-[0rem]'
       id='disavowals'
     >
       <Title>Disavowals</Title>
