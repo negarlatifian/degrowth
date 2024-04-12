@@ -29,6 +29,16 @@ const monumentGrotesk = localFont({
   variable: '--font-monumentGrotesk',
   display: 'swap',
 });
+const groteskSemi = localFont({
+  src: [
+    {
+      path: '../public/fonts/MonumentGrotesk-Semi-Mono.otf',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-groteskSemi',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'The Degrowth Toolbox For Artistic Practices',
@@ -43,7 +53,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${suissIntl.variable} ${monumentGrotesk.variable}`}>
+      <body
+        className={`${suissIntl.variable} ${monumentGrotesk.variable} ${groteskSemi.variable}`}
+      >
         {children}
       </body>
     </html>

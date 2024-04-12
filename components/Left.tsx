@@ -7,58 +7,58 @@ const Left = () => {
   const pathName = usePathname();
   return (
     <div className='flex-col h-lvh w-[38.5%] mt-[3rem] ml-[3.5rem] hidden xs:flex'>
-      {/* <h2 className='font-display'>About</h2> */}
+      {/* <h2 className='font-semiMono'>About</h2> */}
       <Link
         href='/About'
-        className={`font-display ${pathName === '/About' && 'text-green'} `}
+        className={`font-semiMono ${pathName === '/About' && 'text-green'} `}
       >
         About
       </Link>
       <ul className='flex flex-col mt-auto mb-[5rem]'>
-        <li className='font-display'>
+        <li className='font-semiMono'>
           <Link
             href='/#intro'
-            className={`font-display ${
+            className={`font-semiMono ${
               pathName === '/#intro' && 'text-green'
             } `}
           >
             Intro
           </Link>
         </li>
-        <li className='font-display'>
+        <li className='font-semiMono'>
           <Link
             href='/#degrowth'
-            className={`font-display ${
+            className={`font-semiMono ${
               pathName === '/#degrowth' && 'text-green'
             } `}
           >
             Degrowth
           </Link>
         </li>
-        <li className='font-display'>
+        <li className='font-semiMono'>
           <Link
             href='/#values'
-            className={`font-display ${
+            className={`font-semiMono ${
               pathName === '/#values' && 'text-green'
             } `}
           >
             Values
           </Link>
         </li>
-        <li className='font-display'>
+        <li className='font-semiMono'>
           <Link
             href='/#disavowals'
-            className={`font-display ${
+            className={`font-semiMono ${
               pathName === '/#disavowals' && 'text-green'
             } `}
           >
             Disavowals
           </Link>
         </li>
-        <li className='font-display'>
+        <li className='font-semiMono'>
           <Link
             href='/#strategies'
-            className={`font-display ${
+            className={`font-semiMono ${
               pathName === '/#strategies' && 'text-green'
             } `}
           >

@@ -12,6 +12,7 @@ const config: Config = {
       fontFamily: {
         text: ['var(--font-suissIntl)'],
         display: ['var(--font-monumentGrotesk)'],
+        semiMono: ['var(--font-groteskSemi)'],
       },
     },
     colors: {
