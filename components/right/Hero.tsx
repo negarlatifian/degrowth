@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <div className='flex flex-col xs:mt-[3rem] mt-[5rem] ml-[2rem] xs:ml-[0rem] '>
+    <div className='flex flex-col xs:mt-[3rem] mt-[6rem] ml-[2rem] xs:ml-[0rem] '>
       <h1 className='font-text xs:text-[2.4rem] text-[1.6rem] leading-7 xs:leading-10 mb-[1rem]'>
         The Degrowth Toolbox
         <br />

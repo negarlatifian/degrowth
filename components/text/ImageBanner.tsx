@@ -8,7 +8,7 @@ const ImageBanner = ({ srcUrl }: { srcUrl: string }) => {
         alt='degrowth'
         width={748}
         height={372}
-        className='mr-0 w-auto min-w-full'
+        className='h-[160vw] object-cover xs:h-[45vw] xs:w-auto content-start object-left ml-[2rem] xs:ml-[0rem] min-w-full'
       />
     </div>
   );
