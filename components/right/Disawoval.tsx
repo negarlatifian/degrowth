@@ -7,6 +7,26 @@ import TextEndnote from '../text/TextEndnote';
 import Endnote from '../text/Endnote';
 import Sup from '../text/Sup';
 
+const endNote = [
+  {
+    number: '6',
+    content: `6. Mark Fisher, ‘Against Competition’, Blunt Art Text (B.A.T.),
+    April 2006.`,
+  },
+  {
+    number: '7',
+    content: `7. For a more thorough unpacking of this see: K. Szreder, ‘W is for
+    winner takes it all’, in The ABC of the projectariat: Living and
+    working in a precarious art world, Manchester University Press,
+    2021, and: G. Sholette, Dark Matter: Art and Politics in the Age of
+    Enterprise Culture, Pluto Press, 2010.`,
+  },
+  {
+    number: '8',
+    content: `8. :)`,
+  },
+];
+
 const list = [
   'depth,',
   'complexity,',
@@ -82,7 +102,7 @@ const Disawoval = () => {
           <Quote>
             This is a treadmill made from decomposing shit that is so devoid of
             nutrients that even its compost won’t allow anything fresh to grow.
-            <Sup>6</Sup>”
+            <Sup content={endNote[0].content}>6</Sup>”
           </Quote>
           <TextEndnote>
             Despite the recent wave of socially engaged artistic practices and
@@ -92,9 +112,9 @@ const Disawoval = () => {
             competition with each other: competing for work, for exhibition
             space, for attention, even for education. The more you win these
             “competitions”, the more you will continue to win, the more
-            resources you accumulate.<Sup>7</Sup> This state of constant
-            competition is, of course, what makes our exploitation possible to a
-            large degree.
+            resources you accumulate.<Sup content={endNote[1].content}>7</Sup>{' '}
+            This state of constant competition is, of course, what makes our
+            exploitation possible to a large degree.
           </TextEndnote>
           <TextEndnote>
             Working against the competitive model can lead not only to more
@@ -173,22 +193,14 @@ const Disawoval = () => {
             collectors, and commissioners, we always have the option to
             strategically use our positions and resources in order to create
             spaces for community-building; or even to entirely redirect our
-            resources towards other, socially transformative purposes.8
+            resources towards other, socially transformative purposes.
+            <Sup content={endNote[2].content}>8</Sup>
           </TextEndnote>
         </div>
         <div className='xs:flex flex-col hidden'>
-          <Endnote className='mt-[73.5rem]'>
-            6. Mark Fisher, ‘Against Competition’, Blunt Art Text (B.A.T.),
-            April 2006.
-          </Endnote>
-          <Endnote className='mt-[8.6rem]'>
-            7. For a more thorough unpacking of this see: K. Szreder, ‘W is for
-            winner takes it all’, in The ABC of the projectariat: Living and
-            working in a precarious art world, Manchester University Press,
-            2021, and: G. Sholette, Dark Matter: Art and Politics in the Age of
-            Enterprise Culture, Pluto Press, 2010.
-          </Endnote>
-          <Endnote className='mt-[8.6rem]'>8. :)</Endnote>
+          <Endnote className='mt-[73.5rem]'>{endNote[0].content}</Endnote>
+          <Endnote className='mt-[8.6rem]'>{endNote[1].content}</Endnote>
+          <Endnote className='mt-[8.6rem]'>{endNote[2].content}</Endnote>
         </div>
       </div>
     </div>

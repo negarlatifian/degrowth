@@ -8,6 +8,15 @@ import TextEndnote from '../text/TextEndnote';
 import Endnote from '../text/Endnote';
 import Sup from '../text/Sup';
 
+const endNote = [
+  {
+    number: '5',
+    content: `5. Convivialist Manifesto. A declaration of interdependence (Global
+      Dialogues 3), Käte Hamburger Kolleg / Centre for Global Cooperation
+      Research (KHK/GCR21), 2014.`,
+  },
+];
+
 const Values = () => {
   const { ref, inView } = useInView({
     threshold: 0.2,
@@ -52,18 +61,18 @@ const Values = () => {
             Understanding and valuing care requires a recognition of our
             inherent interdependency – no one is self-made, and we all must rely
             on one another in order to survive and thrive.
-            <Sup>5</Sup> In our current neoliberal and patriarchal paradigm care
-            work is systematically devalued and obscured, with those of us
-            responsible for most of the care-giving being also those most
-            excluded: such as women, migrants, and the working class. Ideas of
-            social welfare have been pushed aside for individualised notions of
-            resilience, wellness and self-improvement. By acknowledging and
-            centering care in our lives, practices, and societies, we are also
-            centering well-being and equity. When we think of ourselves as lone
-            individuals and act as such, keeping ourselves isolated from each
-            other, we further entrench ourselves and those around us in
-            precarity. The alternative is to instead work in solidarity with
-            each other.{' '}
+            <Sup content={endNote[0].content}>5</Sup> In our current neoliberal
+            and patriarchal paradigm care work is systematically devalued and
+            obscured, with those of us responsible for most of the care-giving
+            being also those most excluded: such as women, migrants, and the
+            working class. Ideas of social welfare have been pushed aside for
+            individualised notions of resilience, wellness and self-improvement.
+            By acknowledging and centering care in our lives, practices, and
+            societies, we are also centering well-being and equity. When we
+            think of ourselves as lone individuals and act as such, keeping
+            ourselves isolated from each other, we further entrench ourselves
+            and those around us in precarity. The alternative is to instead work
+            in solidarity with each other.{' '}
           </TextEndnote>
           <Subtitle ref={ref} id='community'>
             Community / Collectivity
@@ -98,11 +107,7 @@ const Values = () => {
           </TextEndnote>
         </div>
         <div className='xs:flex flex-col hidden'>
-          <Endnote className='mt-[27.5rem]'>
-            5. Convivialist Manifesto. A declaration of interdependence (Global
-            Dialogues 3), Käte Hamburger Kolleg / Centre for Global Cooperation
-            Research (KHK/GCR21), 2014.
-          </Endnote>
+          <Endnote className='mt-[27.5rem]'>{endNote[0].content}</Endnote>
         </div>
       </div>
     </div>

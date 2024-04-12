@@ -7,6 +7,29 @@ import TextEndnote from '../text/TextEndnote';
 import Endnote from '../text/Endnote';
 import Sup from '../text/Sup';
 
+const endNote = [
+  {
+    number: '9',
+    content: `9. Barbara Muraca, ‘Forward’, in Degrowth in Movement(s): Exploring
+    Pathways for Transformation, ed. Corinna Burkhart, Matthias
+    Schmelzer, and Nina Treu (Winchester, UK ; Washington, USA: Zero
+    Books, 2020). p. 6`,
+  },
+  {
+    number: '10',
+    content: `10. Ekaterina Chertkovskaya, Alexander Paulsson, and Stefania Barca,
+    ‘Introduction: The End of Political Economy as We Knew It? From
+    Growth Realism to Nomadic Utopianism’, in Towards a Political
+    Economy of Degrowth, ed. Ekaterina Chertkovskaya, Alexander
+    Paulsson, and Stefania Barca, Transforming Capitalism (London:
+    Rowman & Littlefield International, 2019). p. 8-9`,
+  },
+  {
+    number: '8',
+    content: `8. :)`,
+  },
+];
+
 const Strategies = () => {
   return (
     <div
@@ -153,7 +176,7 @@ const Strategies = () => {
             utopias also have a prefigurative and performative power: they open
             up space for imagining alternatives and in doing so they act against
             the effectiveness of TINA-narratives (TINA: there is no
-            alternative).<Sup>9</Sup>
+            alternative).<Sup content={endNote[0].content}>9</Sup>
           </Quote>
           <TextEndnote>
             Militant optimism implies a proactive, determined approach to
@@ -171,7 +194,7 @@ const Strategies = () => {
             points to an unfulfilled future that differs from the present".
             Thus, it contains both a description and a process. Utopianism, like
             utopia, contains a description and a process, but puts a particular
-            emphasis on the latter.<Sup>10</Sup>
+            emphasis on the latter.<Sup content={endNote[1].content}>10</Sup>
           </TextEndnote>
           <TextEndnote>
             For many, talk of “optimism” and “utopia” sounds hopelessly
