@@ -19,7 +19,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [visibleSection, setVisibleSection] = useState(null);
+  // const [visibleSection, setVisibleSection] = useState(null);
   const [hideOnScroll, setHideOnScroll] = useState(true);
   useScrollPosition(
     ({ prevPos, currPos }: { prevPos: any; currPos: any }) => {

@@ -13,7 +13,7 @@ const Hero = () => {
         alt='hero'
         height={642}
         width={938}
-        className=' h-[45vw] w-auto content-start object-right-top relative z-0'
+        className=' h-[160vw] object-cover xs:h-[45vw] xs:w-auto content-start object-left relative z-0'
       />
     </div>
   );

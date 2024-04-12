@@ -2,26 +2,18 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IconHamburger, IconX } from './NavIcons';
 
-const Nav = ({
-  content,
-
-  show,
-}: {
-  content: { section: string; title: string; href: string }[];
-
-  show: boolean;
-}) => {
-  return (
-    <>
-      <NavSmall content={content} show={show} />
-    </>
-  );
+const Popup = ({ show }: { show: boolean }) => {
+  return <>{/* <NavSmall  show={show} /> */}</>;
 };
 
 const NavSmall = ({
+  children,
+  className,
   content,
   show,
 }: {
+  children: any;
+  className?: string;
   content: {
     section: string;
     title: string;
@@ -42,6 +34,15 @@ const NavSmall = ({
         <InnerWrapperSmall>
           <NavWrapperSmall>
             {/* <Header>nav</Header> */}
+            <p
+              className={
+                'font-text text-[.6rem] w-[7.5rem] leading-3 mr-[4rem]' +
+                ' ' +
+                className
+              }
+            >
+              {children}
+            </p>
             {content.map((item, i) => (
               <NavLink
                 className='font-text'
@@ -139,11 +140,11 @@ const IconWrapper = styled.div<{ show: boolean }>`
   transition: all 200ms ${(props: any) => (props.show ? 'ease-in' : 'ease-out')};
   transform: ${(props: any) => (props.show ? 'none' : 'translate(100%, 0)')};
 
-  top: 2vw;
-  top: calc(var(--vw, 2vw) * 2);
+  top: 6.1vw;
+  top: calc(var(--vw, 2vw) * 6.1);
 
-  right: 2vw;
-  right: calc(var(--vw, 2vw) * 2);
+  right: 6.1vw;
+  right: calc(var(--vw, 2vw) * 6.1);
 
   width: 9vw;
   width: calc(var(--vw, 1vw) * 9);
@@ -195,4 +196,4 @@ const NavLink = styled.a`
   }
 `;
 
-export default Nav;
+export default Popup;
