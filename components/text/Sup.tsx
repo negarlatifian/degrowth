@@ -31,7 +31,7 @@ const Sup = ({
         {children}
       </sup>
       {open && (
-        <div className='z-10 fixed border-solid border-2 border-[#000000] bg-[#ffffff] w-[60%] h-[15%] top-[50vh] right-[20vw] flex xs:hidden '>
+        <div className='z-10 fixed border-solid border-2 border-[#000000] bg-[#ffffff] px-[2rem] py-[2rem] top-[40vh] right-[10vw] left-[10vw] flex xs:hidden '>
           <div className='flex items-center justify-center px-5'>
             <Text className='mb-0'>{content}</Text>
           </div>
