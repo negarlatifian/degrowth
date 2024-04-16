@@ -33,11 +33,11 @@ const endNote = [
 const Strategies = () => {
   return (
     <div
-      className='xs:mb-[8rem] mb-[2rem] xs:mt-[23rem] mt-[5rem] ml-[2rem] xs:ml-[0rem]'
+      className='xs:mb-[8rem] mb-[2rem] xs:mt-[10rem] mt-[5rem] ml-[2rem] xs:ml-[0rem]'
       id='strategies'
     >
       <Title>Strategies</Title>
-      <div className='flex flex-row justify-between'>
+      <div className='flex flex-row justify-between mt-[-3.5rem]'>
         <div className='flex flex-col'>
           <Subtitle>Slowness / Laziness</Subtitle>
           <TextEndnote>
@@ -238,13 +238,13 @@ const Strategies = () => {
           </TextEndnote>
         </div>
         <div className='xs:flex flex-col hidden'>
-          <Endnote className='mt-[150rem]'>
+          <Endnote className='mt-[170.5rem]'>
             9. Barbara Muraca, ‘Forward’, in Degrowth in Movement(s): Exploring
             Pathways for Transformation, ed. Corinna Burkhart, Matthias
             Schmelzer, and Nina Treu (Winchester, UK ; Washington, USA: Zero
             Books, 2020). p. 6
           </Endnote>
-          <Endnote className='mt-[10rem]'>
+          <Endnote className='mt-[10.5rem]'>
             10. Ekaterina Chertkovskaya, Alexander Paulsson, and Stefania Barca,
             ‘Introduction: The End of Political Economy as We Knew It? From
             Growth Realism to Nomadic Utopianism’, in Towards a Political

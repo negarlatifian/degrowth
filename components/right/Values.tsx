@@ -24,7 +24,7 @@ const Values = () => {
 
   return (
     <div
-      className='xs:mb-[10rem] mb-[2rem] xs:mt-[23rem] mt-[2rem] ml-[2rem] xs:ml-[0rem]'
+      className='xs:mb-[10rem] mb-[2rem] xs:mt-[10rem] mt-[2rem] ml-[2rem] xs:ml-[0rem]'
       id='values'
     >
       {/* <h2 className='font-display text-[2.5rem] mb-[3rem]'>Values</h2> */}

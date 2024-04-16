@@ -61,16 +61,16 @@ const Disawoval = () => {
             unsustainable and incompatible with artistic practice. Efficiency
             goes against:{' '}
           </TextEndnote>
-          <ul className='pl-5 list-disc'>
+          <ul className='pl-5 list-disc ml-[2rem]'>
             {list.map((el) => (
-              <li className='font-text xs:text-[1.1rem] text-[0.75rem]'>
+              <li className='font-text xs:text-[1.1rem] text-[0.75rem] leading-5'>
                 {el}
               </li>
             ))}
           </ul>
           <TextEndnote>All of this in favour of:</TextEndnote>
-          <ul className='pl-5 list-disc mb-[1rem]'>
-            <li className='font-text xs:text-[1.1rem] text-[0.75rem]'>
+          <ul className='pl-5 list-disc mb-[1rem] ml-[2rem]'>
+            <li className='font-text xs:text-[1.1rem] text-[0.75rem] leading-3'>
               easily quantifiable outcomes,
             </li>
             <li className='font-text xs:text-[1.1rem] text-[0.75rem]'>
@@ -200,7 +200,7 @@ const Disawoval = () => {
         <div className='xs:flex flex-col hidden'>
           <Endnote className='mt-[73.5rem]'>{endNote[0].content}</Endnote>
           <Endnote className='mt-[8.6rem]'>{endNote[1].content}</Endnote>
-          <Endnote className='mt-[8.6rem]'>{endNote[2].content}</Endnote>
+          <Endnote className='mt-[71.3rem]'>{endNote[2].content}</Endnote>
         </div>
       </div>
     </div>

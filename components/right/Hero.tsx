@@ -11,7 +11,7 @@ const Hero = () => {
           <h1 className='inline font-text xs:text-[2.4rem] text-[1.6rem] leading-7 xs:leading-10'>
             For Artistic Practices
           </h1>
-          <p className=' font-semiMono xs:text-[0.9rem] text-[0.8rem] text-green flex align-bottom ml-[0.6rem]'>
+          <p className=' font-semiMono xs:text-[0.9rem] text-[0.8rem] text-green flex self-end ml-[0.6rem]'>
             0.2
           </p>
         </div>
