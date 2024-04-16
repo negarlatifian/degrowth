@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'MG Mono';
+  src: local('MG Mono'), url(/fonts/MonumentGrotesk-Mono.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Suisse';
+  src: local('Suisse'), url(/fonts/SuisseIntl-Regular.otf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SuisseBold';
+  src: local('SuisseBold'), url(/fonts/SuisseIntl-Bold.otf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SuisseItalic';
+  src: local('SuisseBold'),
+    url(/fonts/SuisseIntl-RegularItalic.otf) format('truetype');
+  font-weight: 400;
+}
+
+/* THAT GREEN 00FF29 */
+html {
+  scroll-behavior: smooth;
+}
+
+em,
+i {
+  font-family: 'SuisseItalic';
+  font-style: normal;
+  font-weight: 400;
+}
+
+strong {
+  font-family: 'SuisseBold';
+  font-style: normal;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

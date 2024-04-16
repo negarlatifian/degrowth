@@ -1,23 +1,30 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { IconHamburger, IconX } from './NavIcons';
+import { IconHamburger, IconX } from './NavIconsOld';
 
-const Popup = ({ show }: { show: boolean }) => {
-  return <>{/* <NavSmall  show={show} /> */}</>;
+const NavOld = ({
+  content,
+
+  show,
+}: {
+  content: { section: string; title: string }[];
+
+  show: boolean;
+}) => {
+  return (
+    <>
+      <NavSmall content={content} show={show} />
+    </>
+  );
 };
 
 const NavSmall = ({
-  children,
-  className,
   content,
   show,
 }: {
-  children: any;
-  className?: string;
   content: {
     section: string;
     title: string;
-    href: string;
   }[];
   show: boolean;
 }) => {
@@ -33,25 +40,14 @@ const NavSmall = ({
       <WrapperSmall open={isOpen}>
         <InnerWrapperSmall>
           <NavWrapperSmall>
-            {/* <Header>nav</Header> */}
-            <p
-              className={
-                'font-text text-[.6rem] w-[7.5rem] leading-3 mr-[4rem]' +
-                ' ' +
-                className
-              }
-            >
-              {children}
-            </p>
+            <Header>nav</Header>
             {content.map((item, i) => (
               <NavLink
-                className='font-text'
-                // href={`#${item.title}`}
-                href={item.href}
+                href={`#${item.title}`}
                 key={`NavLink${i}`}
                 onClick={() => setIsOpen(false)}
               >
-                {/* <SectionTag className='font-text'>{item.section}</SectionTag> */}
+                <SectionTag>{item.section}</SectionTag>
                 {item.title}
               </NavLink>
             ))}
@@ -71,20 +67,14 @@ export const NavLarge = ({
   content: {
     section: string;
     title: string;
-    href: string;
   }[];
 }) => (
-  <Wrapper className='z-10'>
-    {/* <Header>nav</Header> */}
+  <Wrapper>
+    <Header>nav</Header>
 
     {content.map((item, i) => (
-      <NavLink
-        className='font-text'
-        // href={`#${item.title}`}
-        href={item.href}
-        key={`NavLinkLarge${i}`}
-      >
-        {/* <SectionTag className='font-text'>{item.section}</SectionTag> */}
+      <NavLink href={`#${item.title}`} key={`NavLinkLarge${i}`}>
+        <SectionTag>{item.section}</SectionTag>
         {item.title}
       </NavLink>
     ))}
@@ -92,25 +82,18 @@ export const NavLarge = ({
 );
 
 const WrapperSmall = styled.div<{ open: boolean }>`
-  opacity: ${({ open }: { open: any }) => (open ? '1' : '0')};
+  opacity: ${({ open }) => (open ? '1' : '0')};
   transition: all 0.2s ease-in;
-  pointer-events: ${({ open }: { open: any }) => !open && 'none'};
+  pointer-events: ${({ open }) => !open && 'none'};
 
   padding: 2vw;
   padding: calc(var(--vw, 1vw) * 2);
 
-  background-color: white;
+  background-color: black;
   position: fixed;
-  border: 2px solid black;
-  width: 90%;
-  height: 90%;
-  left: 4vw;
-  right: 4vw;
-  top: 4vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
+  width: 100%;
+  height: 100%;
+  left: 0;
 
   @media (min-width: 750px) {
     display: none;
@@ -118,9 +101,9 @@ const WrapperSmall = styled.div<{ open: boolean }>`
 `;
 
 const InnerWrapperSmall = styled.div`
-  width: 80%;
-  height: 80%;
-
+  width: 100%;
+  height: 100%;
+  border: 1px solid #00ff29;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,19 +115,19 @@ const NavWrapperSmall = styled.div`
 `;
 
 const IconWrapper = styled.div<{ show: boolean }>`
-  /* background-color: white; */
+  background-color: black;
   position: fixed;
   cursor: pointer;
 
-  visibility: ${(props: any) => (props.show ? 'visible' : 'hidden')};
-  transition: all 200ms ${(props: any) => (props.show ? 'ease-in' : 'ease-out')};
-  transform: ${(props: any) => (props.show ? 'none' : 'translate(100%, 0)')};
+  visibility: ${(props) => (props.show ? 'visible' : 'hidden')};
+  transition: all 200ms ${(props) => (props.show ? 'ease-in' : 'ease-out')};
+  transform: ${(props) => (props.show ? 'none' : 'translate(100%, 0)')};
 
   top: 6.1vw;
-  top: calc(var(--vw, 2vw) * 6.1);
+  top: calc(var(--vw, 1vw) * 6.1);
 
   right: 6.1vw;
-  right: calc(var(--vw, 2vw) * 6.1);
+  right: calc(var(--vw, 1vw) * 6.1);
 
   width: 9vw;
   width: calc(var(--vw, 1vw) * 9);
@@ -170,12 +153,63 @@ const Wrapper = styled.div<{ top?: number | null; height?: number | null }>`
   }
 `;
 
+const Header = styled.div`
+  color: #00ff29;
+  font-family: 'MG Mono';
+  text-transform: uppercase;
+
+  font-size: 0.625vw;
+  font-size: calc(var(--vw, 1vw) * 0.625);
+
+  padding-bottom: 0.208vw;
+  padding-bottom: calc(var(--vw, 1vw) * 0.208);
+
+  @media (max-width: 749px) {
+    font-size: 4vw;
+    font-size: calc(var(--vw, 1vw) * 4);
+  }
+
+  @media (min-width: 750px) and (max-width: 1249px) {
+    font-size: 1vw;
+    font-size: calc(var(--vw, 1vw) * 1);
+    padding-bottom: 0vw;
+  }
+`;
+
+const SectionTag = styled(Header)`
+  position: absolute;
+
+  left: -1vw;
+  left: calc(var(--vw, 1vw) * -1);
+
+  top: 0.475vh;
+  top: calc(var(--vh, 1vh) * 0.475);
+
+  @media (max-width: 749px) {
+    font-size: 3vw;
+    font-size: calc(var(--vw, 1vw) * 3);
+
+    left: -5vw;
+    left: calc(var(--vw, 1vw) * -5);
+
+    top: 1.2vh;
+    top: calc(var(--vw, 1vw) * 1.2);
+  }
+
+  @media (min-width: 750px) and (max-width: 1249px) {
+    left: -1.5vw;
+    left: calc(var(--vw, 1vw) * -1.5);
+    top: 0.3vh;
+    top: calc(var(--vh, 1vh) * 0.3);
+  }
+`;
+
 const NavLink = styled.a`
   text-decoration: none;
-  color: #000000;
-  font-family: var(--font-suissIntl);
+  color: white;
+  font-family: 'Suisse';
 
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   position: relative;
 
   font-size: 1.458vw;
@@ -196,4 +230,4 @@ const NavLink = styled.a`
   }
 `;
 
-export default Popup;
+export default NavOld;

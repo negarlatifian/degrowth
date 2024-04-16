@@ -22,7 +22,10 @@ const About = () => {
       </Text>
       <Text>
         You can read the previous iteration of The Toolbox{' '}
-        <a className=' text-green font-text xs:w-[40rem] w-[89%] xs:text-[1.1rem] text-[0.75rem] mb-[1rem] xs:leading-5 leading-4'>
+        <a
+          className=' text-green font-text xs:w-[40rem] w-[89%] xs:text-[1.1rem] text-[0.75rem] mb-[1rem] xs:leading-5 leading-4'
+          href='https://www.degrowthtoolbox.net/beta'
+        >
           here.
         </a>
       </Text>
