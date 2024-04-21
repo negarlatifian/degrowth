@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useContext } from 'react';
 import Title from '../text/Title';
 import Subtitle from '../text/Subtitle';
 import Text from '../text/Text';
@@ -6,6 +7,8 @@ import Quote from '../text/Quote';
 import TextEndnote from '../text/TextEndnote';
 import Endnote from '../text/Endnote';
 import Sup from '../text/Sup';
+import { InView, useInView } from 'react-intersection-observer';
+import { SidebarContext } from '../Context';
 
 const endNote = [
   {
@@ -31,6 +34,10 @@ const endNote = [
 ];
 
 const Strategies = () => {
+  const { section, setSection } = useContext(SidebarContext);
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+  });
   return (
     <div
       className='xs:mb-[8rem] mb-[2rem] xs:mt-[10rem] mt-[5rem] ml-[2rem] xs:ml-[0rem]'
@@ -39,7 +46,15 @@ const Strategies = () => {
       <Title>Strategies</Title>
       <div className='flex flex-row justify-between mt-[-3.5rem]'>
         <div className='flex flex-col'>
-          <Subtitle>Slowness / Laziness</Subtitle>
+          <InView
+            as='div'
+            onChange={(inView, entry) => {
+              inView && setSection('efficiency');
+            }}
+            threshold={1}
+          >
+            <Subtitle SubRef={ref}>Slowness / Laziness</Subtitle>
+          </InView>
           <TextEndnote>
             Slowness and laziness come here as the direct opposites of and
             antidotes to efficiency and overwork. Embracing a certain degree of
@@ -53,7 +68,15 @@ const Strategies = () => {
             prevailing obsession with productivity and a move towards
             well-being.
           </TextEndnote>
-          <Subtitle>Making care work visible</Subtitle>
+          <InView
+            as='div'
+            onChange={(inView, entry) => {
+              inView && setSection('making');
+            }}
+            threshold={1}
+          >
+            <Subtitle SubRef={ref}>Making care work visible</Subtitle>
+          </InView>
           <TextEndnote>
             The vast majority of the labour that goes into artistic projects is
             entirely unseen and peripheral to what we consider art-making
@@ -74,7 +97,15 @@ const Strategies = () => {
             merits. It also sets the foundations to demand proper remuneration
             for care work on an institutional level.
           </TextEndnote>
-          <Subtitle>Sharing resources</Subtitle>
+          <InView
+            as='div'
+            onChange={(inView, entry) => {
+              inView && setSection('sharing');
+            }}
+            threshold={1}
+          >
+            <Subtitle SubRef={ref}>Sharing resources</Subtitle>
+          </InView>
           <TextEndnote>
             In a field where access to resources often determines visibility and
             success, sharing becomes a means of democratising opportunities. It
@@ -93,9 +124,17 @@ const Strategies = () => {
             strengthening the artistic community's resilience against challenges
             and fostering a culture of reciprocity.
           </TextEndnote>
-          <Subtitle>
-            Creating alternative and independent spaces and platforms
-          </Subtitle>
+          <InView
+            as='div'
+            onChange={(inView, entry) => {
+              inView && setSection('sharing');
+            }}
+            threshold={1}
+          >
+            <Subtitle SubRef={ref}>
+              Creating alternative and independent spaces and platforms
+            </Subtitle>
+          </InView>
           <TextEndnote>
             Alternative and independent spaces are fundamental for the existence
             of a vibrant artistic discourse. They offer a refuge for
@@ -113,7 +152,15 @@ const Strategies = () => {
             more democratic and accessible avenue for artists to share their
             work with the public.{' '}
           </TextEndnote>
-          <Subtitle>Self-organisation</Subtitle>
+          <InView
+            as='div'
+            onChange={(inView, entry) => {
+              inView && setSection('organisation');
+            }}
+            threshold={1}
+          >
+            <Subtitle SubRef={ref}>Self-organisation</Subtitle>
+          </InView>
           <TextEndnote>
             At its core, self-organisation champions the idea that individuals,
             whether working independently or collectively, possess the capacity
@@ -132,9 +179,17 @@ const Strategies = () => {
             address emerging challenges, experiment with innovative approaches,
             and remain resilient in the face of external pressures.
           </TextEndnote>
-          <Subtitle>
-            Redirection of institutional resources (or: being sneaky)
-          </Subtitle>
+          <InView
+            as='div'
+            onChange={(inView, entry) => {
+              inView && setSection('redirection');
+            }}
+            threshold={1}
+          >
+            <Subtitle SubRef={ref}>
+              Redirection of institutional resources (or: being sneaky)
+            </Subtitle>
+          </InView>
           <TextEndnote>
             The vast majority of us have no option but to engage in the
             institutional game: we apply for grants, we work with galleries, we
@@ -166,7 +221,17 @@ const Strategies = () => {
             forward a broader spectrum of voices, challenging the dominance of
             certain narratives and perspectives.
           </TextEndnote>
-          <Subtitle>Militant optimism – or, utopianism as strategy</Subtitle>
+          <InView
+            as='div'
+            onChange={(inView, entry) => {
+              inView && setSection('militant');
+            }}
+            threshold={0.75}
+          >
+            <Subtitle SubRef={ref}>
+              Militant optimism – or, utopianism as strategy
+            </Subtitle>
+          </InView>
           <Quote>
             Distinct from mere naïve optimism, which is blind to power and
             awaits with hope some kind of automatic transformation, militant
@@ -204,9 +269,17 @@ const Strategies = () => {
             prophecy. If not even artists cannot allow themselves to be
             idealistic, then who can?
           </TextEndnote>
-          <Subtitle>
-            Navigating contradictions – or, staying with the trouble
-          </Subtitle>
+          <InView
+            as='div'
+            onChange={(inView, entry) => {
+              inView && setSection('navigating');
+            }}
+            threshold={0.5}
+          >
+            <Subtitle SubRef={ref}>
+              Navigating contradictions – or, staying with the trouble
+            </Subtitle>
+          </InView>
           <TextEndnote>
             The freedom to live and act according to the values one holds is, in
             some ways, a privilege. Most of us have to compromise our ideals to

@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 import Title from '../text/Title';
 import Subtitle from '../text/Subtitle';
 import Text from '../text/Text';
@@ -6,6 +6,9 @@ import Quote from '../text/Quote';
 import TextEndnote from '../text/TextEndnote';
 import Endnote from '../text/Endnote';
 import Sup from '../text/Sup';
+import { useContext } from 'react';
+import { SidebarContext } from '../Context';
+import { InView, useInView } from 'react-intersection-observer';
 
 const endNote = [
   {
@@ -44,6 +47,10 @@ const list = [
 ];
 
 const Disawoval = () => {
+  const { section, setSection } = useContext(SidebarContext);
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+  });
   return (
     <div
       className='xs:mb-[10rem] mb-[2rem] xs:mt-[10rem] mt-[5rem] ml-[2rem] xs:ml-[0rem]'
@@ -52,7 +59,15 @@ const Disawoval = () => {
       <Title>Disavowals</Title>
       <div className='flex flex-row justify-between'>
         <div className='flex flex-col'>
-          <Subtitle>Efficiency</Subtitle>
+          <InView
+            as='div'
+            onChange={(inView, entry) => {
+              inView && setSection('efficiency');
+            }}
+            threshold={0.75}
+          >
+            <Subtitle SubRef={ref}>Efficiency</Subtitle>
+          </InView>
           <TextEndnote>
             The emphasis on efficiency in a traditional sense tends to
             prioritise maximising outputs with minimal inputs, a mindset deeply
@@ -82,7 +97,15 @@ const Disawoval = () => {
             on multiple projects at once (see hustle culture), trying to
             maximise professional opportunities in highly competitive fields.
           </TextEndnote>
-          <Subtitle>Competition</Subtitle>
+          <InView
+            as='div'
+            onChange={(inView, entry) => {
+              inView && setSection('competition');
+            }}
+            threshold={1}
+          >
+            <Subtitle SubRef={ref}>Competition</Subtitle>
+          </InView>
           <Quote>
             “So much of the way that the art world is structured favours
             competition. Grants are competitive. Art schools stage student
@@ -124,7 +147,17 @@ const Disawoval = () => {
             collaborators? Collaboration on equal footing, by its nature, leads
             to a healthy exchange of feedback and criticism.
           </TextEndnote>
-          <Subtitle>Hustle culture – or Constant overwork</Subtitle>
+          <InView
+            as='div'
+            onChange={(inView, entry) => {
+              inView && setSection('hustle');
+            }}
+            threshold={1}
+          >
+            <Subtitle SubRef={ref}>
+              Hustle culture – or Constant overwork
+            </Subtitle>
+          </InView>
           <TextEndnote>
             Arising from the embrace of well-being as a value and the rejection
             of capitalist ideas of efficiency comes the rejection of hustle
@@ -152,10 +185,18 @@ const Disawoval = () => {
             structures that keep us precarious perpetuates the existence of the
             structures themselves.
           </TextEndnote>
-          <Subtitle>
-            The over-reliance on grant-givers, galleries, museums, collectors,
-            and commissioners{' '}
-          </Subtitle>
+          <InView
+            as='div'
+            onChange={(inView, entry) => {
+              inView && setSection('museums');
+            }}
+            threshold={1}
+          >
+            <Subtitle SubRef={ref}>
+              The over-reliance on grant-givers, galleries, museums, collectors,
+              and commissioners{' '}
+            </Subtitle>
+          </InView>
           <TextEndnote>
             It often seems that there are only two pathways an artistic project
             can take: one is to follow the directives of the art market; the

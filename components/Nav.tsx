@@ -41,16 +41,13 @@ const NavSmall = ({
       <WrapperSmall open={isOpen}>
         <InnerWrapperSmall>
           <NavWrapperSmall>
-            {/* <Header>nav</Header> */}
             {content.map((item, i) => (
               <NavLink
                 className='font-text'
-                // href={`#${item.title}`}
                 href={item.href}
                 key={`NavLink${i}`}
                 onClick={() => setIsOpen(false)}
               >
-                {/* <SectionTag className='font-text'>{item.section}</SectionTag> */}
                 {item.title}
               </NavLink>
             ))}

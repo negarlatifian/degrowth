@@ -1,9 +1,11 @@
 'use client';
 
+import { createContext, useContext } from 'react';
 import { useMemo, useState } from 'react';
 import { useScrollPosition } from '../UseScrollPosition';
 import Nav from '@/components/Nav';
 import Left from '@/components/Left';
+import Context from '@/components/Context';
 
 const nav = [
   { section: 'a0', title: 'About', href: '/About' },
@@ -14,12 +16,14 @@ const nav = [
   { section: 'b2', title: 'Strategies', href: '/#strategies' },
 ];
 
+const SidebarContext = createContext<any>(null);
+const SetSectionContext = createContext<any>(null);
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const [visibleSection, setVisibleSection] = useState(null);
   const [hideOnScroll, setHideOnScroll] = useState(true);
   useScrollPosition(
     ({ prevPos, currPos }: { prevPos: any; currPos: any }) => {
@@ -34,13 +38,15 @@ export default function RootLayout({
   return useMemo(
     () => (
       <main className='overflow-x-hidden'>
-        <Nav content={nav} show={hideOnScroll} />
-        <div className='flex flex-row bg-white h-lvh overflow-y-hidden'>
-          <Left />
-          <div className='flex flex-col w-[100%] sm:w-[61.5%] overflow-y-scroll'>
-            {children}
+        <Context>
+          <Nav content={nav} show={hideOnScroll} />
+          <div className='flex flex-row bg-white h-lvh overflow-y-hidden'>
+            <Left />
+            <div className='flex flex-col w-[100%] sm:w-[61.5%] overflow-y-scroll'>
+              {children}
+            </div>
           </div>
-        </div>
+        </Context>
       </main>
     ),
     [hideOnScroll]

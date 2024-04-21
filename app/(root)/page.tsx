@@ -5,7 +5,6 @@ import Introduction from '@/components/right/Introduction';
 import Strategies from '@/components/right/Strategies';
 import Values from '@/components/right/Values';
 import ImageBanner from '@/components/text/ImageBanner';
-import { useEffect } from 'react';
 
 export default function Home() {
   // useEffect(() => {
@@ -23,6 +22,7 @@ export default function Home() {
       <Disawoval />
       <ImageBanner srcUrl='/Images/4.jpg' />
       <Strategies />
+      {/* </InView> */}
     </>
   );
 }
