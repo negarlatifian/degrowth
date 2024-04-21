@@ -66,7 +66,9 @@ const Disawoval = () => {
             }}
             threshold={0.75}
           >
-            <Subtitle SubRef={ref}>Efficiency</Subtitle>
+            <Subtitle SubRef={ref} id='efficiency'>
+              Efficiency
+            </Subtitle>
           </InView>
           <TextEndnote>
             The emphasis on efficiency in a traditional sense tends to
@@ -104,7 +106,9 @@ const Disawoval = () => {
             }}
             threshold={1}
           >
-            <Subtitle SubRef={ref}>Competition</Subtitle>
+            <Subtitle SubRef={ref} id='competition'>
+              Competition
+            </Subtitle>
           </InView>
           <Quote>
             “So much of the way that the art world is structured favours
@@ -154,7 +158,7 @@ const Disawoval = () => {
             }}
             threshold={1}
           >
-            <Subtitle SubRef={ref}>
+            <Subtitle SubRef={ref} id='hustle'>
               Hustle culture – or Constant overwork
             </Subtitle>
           </InView>
@@ -192,7 +196,7 @@ const Disawoval = () => {
             }}
             threshold={1}
           >
-            <Subtitle SubRef={ref}>
+            <Subtitle SubRef={ref} id='museums'>
               The over-reliance on grant-givers, galleries, museums, collectors,
               and commissioners{' '}
             </Subtitle>

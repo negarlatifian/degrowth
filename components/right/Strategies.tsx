@@ -53,7 +53,9 @@ const Strategies = () => {
             }}
             threshold={1}
           >
-            <Subtitle SubRef={ref}>Slowness / Laziness</Subtitle>
+            <Subtitle SubRef={ref} id='slowness'>
+              Slowness / Laziness
+            </Subtitle>
           </InView>
           <TextEndnote>
             Slowness and laziness come here as the direct opposites of and
@@ -75,7 +77,9 @@ const Strategies = () => {
             }}
             threshold={1}
           >
-            <Subtitle SubRef={ref}>Making care work visible</Subtitle>
+            <Subtitle SubRef={ref} id='making'>
+              Making care work visible
+            </Subtitle>
           </InView>
           <TextEndnote>
             The vast majority of the labour that goes into artistic projects is
@@ -104,7 +108,9 @@ const Strategies = () => {
             }}
             threshold={1}
           >
-            <Subtitle SubRef={ref}>Sharing resources</Subtitle>
+            <Subtitle SubRef={ref} id='sharing'>
+              Sharing resources
+            </Subtitle>
           </InView>
           <TextEndnote>
             In a field where access to resources often determines visibility and
@@ -131,7 +137,7 @@ const Strategies = () => {
             }}
             threshold={1}
           >
-            <Subtitle SubRef={ref}>
+            <Subtitle SubRef={ref} id='creating'>
               Creating alternative and independent spaces and platforms
             </Subtitle>
           </InView>
@@ -159,7 +165,9 @@ const Strategies = () => {
             }}
             threshold={1}
           >
-            <Subtitle SubRef={ref}>Self-organisation</Subtitle>
+            <Subtitle SubRef={ref} id='organisation'>
+              Self-organisation
+            </Subtitle>
           </InView>
           <TextEndnote>
             At its core, self-organisation champions the idea that individuals,
@@ -186,7 +194,7 @@ const Strategies = () => {
             }}
             threshold={1}
           >
-            <Subtitle SubRef={ref}>
+            <Subtitle SubRef={ref} id='redirection'>
               Redirection of institutional resources (or: being sneaky)
             </Subtitle>
           </InView>
@@ -228,7 +236,7 @@ const Strategies = () => {
             }}
             threshold={0.75}
           >
-            <Subtitle SubRef={ref}>
+            <Subtitle SubRef={ref} id='militant'>
               Militant optimism – or, utopianism as strategy
             </Subtitle>
           </InView>
@@ -276,7 +284,7 @@ const Strategies = () => {
             }}
             threshold={0.5}
           >
-            <Subtitle SubRef={ref}>
+            <Subtitle SubRef={ref} id='navigating'>
               Navigating contradictions – or, staying with the trouble
             </Subtitle>
           </InView>

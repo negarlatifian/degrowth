@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { SidebarContext } from './Context';
 
 const Left = () => {
@@ -11,6 +11,9 @@ const Left = () => {
   }: { section: string | null; setSection: (newSection: string) => void } =
     useContext(SidebarContext);
   const pathName = usePathname();
+  const [vHover, setVHover] = useState(false);
+  const [dHover, setDHover] = useState(false);
+  const [sHover, setSHover] = useState(false);
   return (
     <div className='flex-col h-lvh w-[38.5%] mt-[3rem] ml-[3.5rem] hidden xs:flex'>
       <Link
@@ -40,7 +43,11 @@ const Left = () => {
             Degrowth
           </Link>
         </li>
-        <li className='font-semiMono'>
+        <li
+          className='font-semiMono'
+          onMouseEnter={() => setVHover(true)}
+          onMouseLeave={() => setVHover(false)}
+        >
           <Link
             href='/#values'
             className={`font-semiMono 
@@ -52,11 +59,12 @@ const Left = () => {
           </Link>
           {section === 'values1' ||
           section === 'values2' ||
-          section === 'values3' ? (
+          section === 'values3' ||
+          vHover ? (
             <ul className='ml-4 w-[16rem] leading-4'>
               <li>
                 <Link
-                  href='/#values'
+                  href='/#well-being'
                   className={`font-semiMono ${
                     section === 'values1' && 'text-green'
                   } 
@@ -67,7 +75,7 @@ const Left = () => {
               </li>
               <li>
                 <Link
-                  href='/#values'
+                  href='/#care'
                   className={`font-semiMono
                   ${section === 'values2' && 'text-green'}
                     text-[0.8rem]
@@ -78,7 +86,7 @@ const Left = () => {
               </li>
               <li>
                 <Link
-                  href='/#values'
+                  href='/#community'
                   className={`font-semiMono 
                   ${section === 'values3' && 'text-green'} 
                   text-[0.8rem]
@@ -92,18 +100,23 @@ const Left = () => {
             <></>
           )}
         </li>
-        <li className='font-semiMono'>
+        <li
+          className='font-semiMono'
+          onMouseEnter={() => setDHover(true)}
+          onMouseLeave={() => setDHover(false)}
+        >
           <Link href='/#disavowals' className={`font-semiMono  `}>
             Disavowals
           </Link>
           {section === 'efficiency' ||
           section === 'competition' ||
           section === 'hustle' ||
-          section === 'museums' ? (
+          section === 'museums' ||
+          dHover ? (
             <ul className='ml-4 w-[16rem] leading-4'>
               <li>
                 <Link
-                  href='/#disavowals'
+                  href='/#efficiency'
                   className={`font-semiMono ${
                     section === 'efficiency' && 'text-green'
                   } 
@@ -114,7 +127,7 @@ const Left = () => {
               </li>
               <li>
                 <Link
-                  href='/#disavowals'
+                  href='/#competition'
                   className={`font-semiMono
                   ${section === 'competition' && 'text-green'}
                     text-[0.8rem]
@@ -125,7 +138,7 @@ const Left = () => {
               </li>
               <li>
                 <Link
-                  href='/#disavowals'
+                  href='/#hustle'
                   className={`font-semiMono 
                   ${section === 'hustle' && 'text-green'} 
                   text-[0.8rem]
@@ -136,7 +149,7 @@ const Left = () => {
               </li>
               <li>
                 <Link
-                  href='/#disavowals'
+                  href='/#museums'
                   className={`font-semiMono 
                   ${section === 'museums' && 'text-green'} 
                   text-[0.8rem]
@@ -151,7 +164,11 @@ const Left = () => {
             <></>
           )}
         </li>
-        <li className='font-semiMono'>
+        <li
+          className='font-semiMono'
+          onMouseEnter={() => setSHover(true)}
+          onMouseLeave={() => setSHover(false)}
+        >
           <Link href='/#strategies' className={`font-semiMono  `}>
             Strategies
           </Link>
@@ -162,11 +179,12 @@ const Left = () => {
           section === 'organisation' ||
           section === 'redirection' ||
           section === 'militant' ||
-          section === 'navigating' ? (
+          section === 'navigating' ||
+          sHover ? (
             <ul className='ml-4 w-[17rem] leading-4'>
               <li>
                 <Link
-                  href='/#strategies'
+                  href='/#slowness'
                   className={`font-semiMono ${
                     section === 'slowness' && 'text-green'
                   } 
@@ -177,7 +195,7 @@ const Left = () => {
               </li>
               <li>
                 <Link
-                  href='/#strategies'
+                  href='/#making'
                   className={`font-semiMono ${
                     section === 'making' && 'text-green'
                   } 
@@ -188,7 +206,7 @@ const Left = () => {
               </li>
               <li>
                 <Link
-                  href='/#strategies'
+                  href='/#sharing'
                   className={`font-semiMono
                   ${section === 'sharing' && 'text-green'}
                     text-[0.8rem]
@@ -199,7 +217,7 @@ const Left = () => {
               </li>
               <li>
                 <Link
-                  href='/#strategies'
+                  href='/#creating'
                   className={`font-semiMono 
                   ${section === 'creating' && 'text-green'} 
                   text-[0.8rem]
@@ -210,7 +228,7 @@ const Left = () => {
               </li>
               <li>
                 <Link
-                  href='/#strategies'
+                  href='/#organisation'
                   className={`font-semiMono 
                   ${section === 'organisation' && 'text-green'} 
                   text-[0.8rem]
@@ -221,7 +239,7 @@ const Left = () => {
               </li>
               <li>
                 <Link
-                  href='/#strategies'
+                  href='/#redirection'
                   className={`font-semiMono 
                   ${section === 'redirection' && 'text-green'} 
                   text-[0.8rem]
@@ -232,7 +250,7 @@ const Left = () => {
               </li>
               <li>
                 <Link
-                  href='/#strategies'
+                  href='/#militant'
                   className={`font-semiMono 
                   ${section === 'militant' && 'text-green'} 
                   text-[0.8rem]
@@ -243,7 +261,7 @@ const Left = () => {
               </li>
               <li>
                 <Link
-                  href='/#strategies'
+                  href='/#navigating'
                   className={`font-semiMono 
                   ${section === 'navigating' && 'text-green'} 
                   text-[0.8rem]
