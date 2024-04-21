@@ -18,6 +18,7 @@ const Left = () => {
     <div className='flex-col h-lvh w-[38.5%] mt-[3rem] ml-[3.5rem] hidden xs:flex'>
       <Link
         href='/About'
+        onClick={() => setSection('')}
         className={`font-semiMono ${pathName === '/About' && 'text-green'}  `}
       >
         About
