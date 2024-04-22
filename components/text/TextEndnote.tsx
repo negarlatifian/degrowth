@@ -10,7 +10,7 @@ const TextEndnote = ({
   return (
     <p
       className={
-        'font-text  xs:text-[1.15rem] md:tex-[1.15rem] text-[0.75rem] mt-[1rem] xs:leading-5 leading-4 xs:w-[40rem] w-[89%]' +
+        'font-text  xs:text-[1rem] md:tex-[1.15rem] text-[0.75rem] mt-[1rem] xs:leading-5 leading-4 xs:w-[40rem] w-[89%]' +
         ' ' +
         className
       }
