@@ -23,7 +23,7 @@ const Introduction = () => {
       >
         <Title>Introduction</Title>
 
-        <Text>
+        <Text className='mt-[4rem]'>
           The Degrowth Toolbox for Artistic Practices is both a proposal and an
           invitation. Emerging from an ongoing artistic research process, The
           Toolbox asks:

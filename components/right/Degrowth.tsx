@@ -56,7 +56,7 @@ const Degrowth = () => {
         <Title>Degrowth</Title>
         <div className='flex flex-row justify-between'>
           <div className='flex flex-col'>
-            <TextEndnote>
+            <TextEndnote className='mt-[4rem]'>
               Emerging from the field of political ecology, degrowth signifies,
               first and foremost, a critique of the narrative of perpetual
               economic growth, and of the centering of growth as a social
@@ -103,7 +103,7 @@ const Degrowth = () => {
             </Quote>
           </div>
           <div className='xs:flex flex-col hidden'>
-            <Endnote className='mt-[3.5rem]'>{endNote[0].content}</Endnote>
+            <Endnote className='mt-[6.5rem]'>{endNote[0].content}</Endnote>
             <Endnote className='mt-[8.3rem]'>{endNote[1].content}</Endnote>
             <Endnote className='mt-[1.1rem]'>{endNote[2].content}</Endnote>
             <Endnote className='mt-[1.1rem]'>{endNote[3].content}</Endnote>
