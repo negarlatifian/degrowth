@@ -103,10 +103,10 @@ const Degrowth = () => {
             </Quote>
           </div>
           <div className='xs:flex flex-col hidden'>
-            <Endnote className='mt-[2.7rem]'>{endNote[0].content}</Endnote>
-            <Endnote className='mt-[9rem]'>{endNote[1].content}</Endnote>
-            <Endnote className='mt-[1.5rem]'>{endNote[2].content}</Endnote>
-            <Endnote className='mt-[1.5rem]'>{endNote[3].content}</Endnote>
+            <Endnote className='mt-[3.5rem]'>{endNote[0].content}</Endnote>
+            <Endnote className='mt-[8.3rem]'>{endNote[1].content}</Endnote>
+            <Endnote className='mt-[1.1rem]'>{endNote[2].content}</Endnote>
+            <Endnote className='mt-[1.1rem]'>{endNote[3].content}</Endnote>
           </div>
         </div>
       </InView>

@@ -243,9 +243,9 @@ const Disawoval = () => {
           </TextEndnote>
         </div>
         <div className='xs:flex flex-col hidden'>
-          <Endnote className='mt-[73.5rem]'>{endNote[0].content}</Endnote>
-          <Endnote className='mt-[8.6rem]'>{endNote[1].content}</Endnote>
-          <Endnote className='mt-[71.3rem]'>{endNote[2].content}</Endnote>
+          <Endnote className='mt-[67.5rem]'>{endNote[0].content}</Endnote>
+          <Endnote className='mt-[0.9rem]'>{endNote[1].content}</Endnote>
+          <Endnote className='mt-[85rem]'>{endNote[2].content}</Endnote>
         </div>
       </div>
     </div>

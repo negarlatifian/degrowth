@@ -319,7 +319,7 @@ const Strategies = () => {
           </TextEndnote>
         </div>
         <div className='xs:flex flex-col hidden'>
-          <Endnote className='mt-[170.5rem]'>
+          <Endnote className='mt-[169.5rem]'>
             9. Barbara Muraca, ‘Forward’, in Degrowth in Movement(s): Exploring
             Pathways for Transformation, ed. Corinna Burkhart, Matthias
             Schmelzer, and Nina Treu (Winchester, UK ; Washington, USA: Zero

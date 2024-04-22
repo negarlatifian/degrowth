@@ -136,11 +136,11 @@ const IconWrapper = styled.div<{ show: boolean }>`
   transition: all 200ms ${(props: any) => (props.show ? 'ease-in' : 'ease-out')};
   transform: ${(props: any) => (props.show ? 'none' : 'translate(100%, 0)')};
 
-  top: 2vw;
-  top: calc(var(--vw, 2vw) * 2);
+  top: 4vw;
+  top: calc(var(--vw, 4vw) * 2);
 
-  right: 2vw;
-  right: calc(var(--vw, 2vw) * 2);
+  right: 5vw;
+  right: calc(var(--vw, 5vw) * 2);
 
   width: 9vw;
   width: calc(var(--vw, 1vw) * 9);
