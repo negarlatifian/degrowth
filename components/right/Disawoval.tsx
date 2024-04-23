@@ -80,17 +80,17 @@ const Disawoval = () => {
           </TextEndnote>
           <ul className='pl-5 list-disc ml-[2rem]'>
             {list.map((el) => (
-              <li className='font-text xs:text-[1.1rem] text-[0.75rem] leading-5'>
+              <li className='font-text xs:text-[1rem] text-[0.75rem] leading-5'>
                 {el}
               </li>
             ))}
           </ul>
           <TextEndnote>All of this in favour of:</TextEndnote>
           <ul className='pl-5 list-disc mb-[1rem] ml-[2rem]'>
-            <li className='font-text xs:text-[1.1rem] text-[0.75rem] leading-3'>
+            <li className='font-text xs:text-[1rem] text-[0.75rem] leading-3'>
               easily quantifiable outcomes,
             </li>
-            <li className='font-text xs:text-[1.1rem] text-[0.75rem]'>
+            <li className='font-text xs:text-[1rem] text-[0.75rem]'>
               and met deadlines.{' '}
             </li>
           </ul>

@@ -136,7 +136,7 @@ const Values = () => {
           </InView>
         </div>
         <div className='xs:flex flex-col hidden'>
-          <Endnote className='mt-[33.5rem]'>{endNote[0].content}</Endnote>
+          <Endnote className='mt-[32.5rem]'>{endNote[0].content}</Endnote>
         </div>
       </div>
     </div>
